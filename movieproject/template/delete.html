@@ -1,0 +1,20 @@
+{% extends 'common.html' %}
+{% block body %}
+
+<form method="post">
+    {% csrf_token %}
+    <b>Are you sure?</b><br>
+    <input type="submit" class="btn btn-info">
+
+<a class="btn btn-dark" href="javascript:window.history.back();">Cancel</a>
+
+
+
+{% endblock %}
+
+
+
+<!--    <a href="" >hi-->
+<!--    </a>-->
+
+</form>

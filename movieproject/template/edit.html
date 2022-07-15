@@ -1,0 +1,10 @@
+{% extends 'common.html' %}
+{% block body %}
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" class="btn btn-info">
+  <a class="btn btn-dark" href="javascript:window.history.back();">Cancel</a>
+
+</form>
+{% endblock %}

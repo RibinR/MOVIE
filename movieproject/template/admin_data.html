@@ -1,0 +1,23 @@
+{% extends 'common.html' %}
+{% load static %}
+
+{% block body %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-image:url('{% static '7.jpg' %}')">
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="Movie_name"><br>
+    <textarea name="desc" cols="40" rows="10" placeholder="Movie desc"></textarea><br>
+    <input type="text" name="year" placeholder="Release_Year"><br>
+    <input type="file" name="img"><br><br>
+    <input type="submit" value="ADD_MOVIE" class="btn btn-info">
+    <a class="btn btn-dark" href="javascript:window.history.back();">Cancel</a>
+
+</form>
+
+</body>
+{% endblock %}
